@@ -18,6 +18,12 @@ Node::Node(int a,int b){
 }
 
 
+void square(int x){
+    std::cout << x*x << std::endl;
+}
+
+
 int main(){
     std::cout << Node(3,2).x << std::endl;
+
 }
