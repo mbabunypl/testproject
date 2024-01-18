@@ -9,7 +9,10 @@ struct Node{
     int x;
     int y;
 
-    Node(int a,int b);
+    Node(int a=0,int b=0);
 };
 
-Node
+Node::Node(int a,int b){
+    this->x = a;
+    this->y = b;
+}
