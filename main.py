@@ -1,45 +1,30 @@
 
+class Square:
+    def __init__(self):
+        self.x = 0
+        self.y = 0
+        self.z = 0
+    
 
-def encode(s):
-    result = ''
-    current_char = s[0]
-    count = 1
+    def setx(self,x):
+        self.x = x
+    def sety(self,y):
+        self.y = y
+    def setz(self,z):
+        self.z = z
+    
+    def getx(self):
+        return self.x
+    def gety(self):
+        return self.y
+    def getz(self):
+        return self.z
+    
 
-    for char in s[1:]:
-        if char == current_char:
-            count += 1
-        else:
-            result += current_char + str(count)
-            current_char = char
-            count = 1
-
-    result += current_char + str(count)
-    return result
-
-def decode(s):
-    result = ''
-    i = 0
-
-    while i < len(s):
-        char = s[i]
-        count_str = ''
-        i += 1
-
-        while i < len(s) and s[i].isdigit():
-            count_str += s[i]
-            i += 1
-
-        count = int(count_str)
-        result += char * count
-
-    return result
-
-# Example usage:
-original_string = 'aabbbbaaaaaaabbbbb'
-encoded_string = encode(original_string)
-decoded_string = decode(encoded_string)
-
-x = "0"*1000 + "3" *130 + "2"*120 + "0"*10 + "01"*10
-y = encode(x)
-#print(x,y)
-print(len(x),len(y))
+    def get(self):
+        return (self.getx(),self.gety(),self.getz())
+    def set(self,x,y,z):
+        self.setx(x)
+        self.sety(y)
+        self.setz(z)
+        
