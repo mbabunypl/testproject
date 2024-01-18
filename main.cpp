@@ -18,11 +18,15 @@ Node::Node(int a,int b){
 }
 
 
-void square(int &x){
+int square(int &x){
     x = x*x;
+    return x;
 }
 
-
+int square(int &&x){
+    x = x*x;
+    return x;
+}
 int main(){
     std::cout << Node(3,2).x << std::endl;
 
