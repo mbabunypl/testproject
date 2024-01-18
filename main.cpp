@@ -18,8 +18,8 @@ Node::Node(int a,int b){
 }
 
 
-void square(int x){
-    std::cout << x*x << std::endl;
+void square(int &x){
+    x = x*x;
 }
 
 
