@@ -16,3 +16,8 @@ Node::Node(int a,int b){
     this->x = a;
     this->y = b;
 }
+
+
+int main(){
+    std::cout << Node(3,2).x << std::endl;
+}
